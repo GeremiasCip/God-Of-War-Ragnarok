@@ -1,0 +1,38 @@
+header {
+    width: 100%; // largura do tamanho da tela
+    height: 8rem;
+    display: flex; // centraliza os itens alinhado no centro
+    align-items: center;
+    background-color: #000000;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .platform {
+            display: flex;
+            align-items: center;
+
+            span {
+                font-weight: 600;
+                font-size: 1.6rem;
+                line-height: 1.7rem;
+            }
+
+            ul {
+                display: flex;
+                gap: 0.8rem; // gap: propriedade para separar os dois elementos
+                margin-left: 1.8rem;
+
+                li {
+                    padding: 0.4rem 0.8rem;
+                    border: solid 0.15rem #FFFFFF;
+                    font-weight: 600;
+                    font-size: 1.6rem;
+                    line-height: 1.7rem;
+                }
+            }
+        }
+    }
+}

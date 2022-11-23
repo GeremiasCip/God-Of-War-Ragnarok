@@ -1,0 +1,187 @@
+.s-hero {
+    padding-top: 16.4rem;
+    padding-bottom: 10.3rem;
+    background-image: url(../img/bg-hero.jpg);
+    background-position: center center; // posiciona a imagem totalmente no centro
+    background-repeat: no-repeat; // não repetir a imagem caso a tela seja muuuito grande
+    height: 800px; // aplicando a altura para ser a mesma que a do layout
+
+    .container {
+        display: flex;
+        align-items: flex-end; // não usei center pois as duas divs não estão centralizadas no design
+        justify-content: space-between;
+    }
+
+    .left {
+        width: 100%;
+        max-width: 78.3rem;
+
+        h1 {
+            margin-top: 2.4rem;
+            margin-bottom: 1.8rem;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 2.2rem;
+            line-height: 140%;
+            color: #FFFFFF;
+            margin-bottom: 4rem;
+        }
+
+        .value {
+            display: flex;
+
+            strong {
+                padding: 1.8rem 3.6rem;
+                background: #ffffff;
+                font-weight: 700;
+                font-size: 2rem;
+                line-height: 2.2rem;
+                color: #000000;
+            }
+
+            a {
+                display: block; // a tag de link por default é inline, por isso não dá pra aplicar padding, etc, sem transformá-la em elemento de bloco
+                padding: 1.8rem 3.6rem;
+                background-color:  #3265EA;
+                font-weight: 700;
+                font-size: 2rem;
+                line-height: 2.2rem;
+            }
+        }
+    }
+
+    .right {
+        position: relative; // position relative e top para diferenciar as alturas das duas divs (left e right)
+        top: 9.7rem;
+        width: 100%;
+        max-width: 44.3rem;
+
+        span {
+            display: block; // o span por default é inline. Block ajuda a quebrar essa barreira
+            font-weight: 700;
+            font-size: 1.8rem;
+            line-height: 2rem;
+            margin-bottom: 2.3rem;
+        }
+
+        button {
+            position: relative; // div pai do botao de play deve ser relative para ele ter a absolute
+            width: 100%;
+            height: 24.7rem;
+            border: solid 0.2rem #3265EA;
+            overflow: hidden; // o tamanho do gif ultrapassou a borda de baixo, o overflow contorna isso
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            margin-bottom: 5.1rem;
+
+            .thumbnail {
+                width: 100%; // para a imagem pegar 100% do tamanho do botão
+            }
+
+            .play {
+                position: absolute;
+                bottom: 2.5rem;
+                left: 3.2rem;
+            }
+        }
+
+        .year-old {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 17px;
+                color: #ffffff;
+                max-width: 27.4rem;
+            }
+
+        }
+    }
+}
+
+.info-geral {
+    width: 100%;
+    height: 18rem;
+    background-color: #090A0A;
+    display: flex; // displau flex para poder centralizar/alinhar todos os elementos no centro da div
+    align-items: center;
+
+    ul {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            span {
+                display: block;
+                text-align: center;
+                font-weight: 400;
+                font-size: 1.6rem;
+                line-height: 160%;
+                color: #BDC2CB;
+                margin-top: 1.2rem;
+            }
+        }
+    }
+}
+
+.s-story {
+    width: 100%;
+    padding-top: 16rem;
+    padding-bottom: 8rem ;
+    background-image: url(../img/bg-story.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left {
+        width: 100%;
+        max-width: 62.9rem;
+
+        h2 {
+            margin-top: 2.8rem;
+            margin-bottom: 2.4rem;
+            max-width: 50.2rem;
+        }
+
+        p {
+            margin-bottom: 5.6rem;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 160%;
+        }
+
+        .corp {
+            display: flex;
+            align-items: center;
+
+            p {
+                max-width: 32.4rem;
+                margin-bottom: 0;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 160%;
+                margin-left: 4.7rem;
+            }
+        }
+    }
+
+    .right {
+        position: relative;
+        left: 2rem;
+        top: 0.5rem;
+    }
+}

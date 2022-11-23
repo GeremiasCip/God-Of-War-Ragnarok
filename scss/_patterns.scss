@@ -1,0 +1,91 @@
+.subtitle {
+    display: flex;
+    align-items: center;
+
+    span {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 20px;
+        margin-left: 1.5rem;
+    }
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 12rem;
+    line-height: 97.5%;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 130%;
+}
+
+p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: #BDC2CB;
+}
+
+.card-character {
+    width: 100%;
+    max-width: 38.4rem;
+    // altura não precisará ser definida pois todas as imagens terão a mesma altura e a mesma qtd de texto
+
+    .image {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        // não é preciso o max-width pois a imagem já está ocupando toda a área da classe pai 
+        height: 52rem;
+        overflow: hidden; // Passo 10: Cria uma máscara que esconde tudo que passar para fora da área
+        margin-bottom: 2.4rem;
+
+        img { // Passo 9: aplicar suavidade à transformação
+            transition: transform .3s ease;
+        }
+
+        button {
+            position: absolute;
+            bottom: 0; // Passo 4: o botão deve começar lá em baixo para depois atingir 5.7rem de altura
+            padding: 1.8rem 3.6rem; 
+            background: #3265EA;
+            font-weight: 700;
+            font-size: 1.8rem;
+            line-height: 2rem;
+            opacity: 0; // Passo 1 para a micro interação: esconder o botão
+            transition: all .3s ease; // Passo 3 para a micro interação: adicionar suavidade ao movimento & Passo 6: o primeiro valor da propriedade é mudada para "all" para o movimento de suavidade ficar 100%
+        }
+    }
+
+    .info {
+        h3 {
+            font-weight: 700;
+            font-size: 1.8rem;
+            line-height: 2rem;
+            margin-bottom: 7px;
+        }
+
+        span {
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.5rem;
+        }
+    }
+
+    &:hover { // === card-character:hover no css
+        .image {
+            img { // Passo 7: adicionar o zoom à micro interação
+                transform: scale(1.1); // Passo 8: aumenta a escala da imagem
+            }
+
+            button {
+                opacity: 1;  // Passo 2 para a micro interação: mostrar o botão
+                bottom: 5.7rem; // Passo 5: O botão sobe para sua altura final
+            }
+        }
+    }
+}
