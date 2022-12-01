@@ -101,6 +101,98 @@
 
         }
     }
+
+    @media(max-width:1200px) { 
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+        height: auto;
+        background-position-x: 30%; // posição do background em relação ao eixo x
+
+        .left {
+            max-width: 64rem;
+
+            p {
+                font-size: 1.8rem;
+            }
+        }
+
+        .right {
+            top: 0;
+            max-width: 35.3rem;
+            
+            button {
+                height: 19.7rem;
+            }
+        }
+
+    }
+
+    @media(max-width: 991px) {
+        padding: 6rem 0;
+        background-size: cover;
+
+        .container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .left {
+            text-align: center;
+            margin-bottom: 4rem;
+
+            .value {
+                justify-content: center;
+            }
+        }
+
+        .right {
+            text-align: center;
+
+            button {
+               margin-bottom: 3rem;
+            }
+
+            .year-old {
+                flex-direction: column;
+
+                p {
+                    margin-left: 0;
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 560px) {
+        padding: 4rem 0;
+
+        .left {
+            p {
+                font-size: 1.4rem;
+                max-width: 80%;
+                margin: 0 auto; // centraliza o texto
+                margin-bottom: 3rem;
+            }
+
+            .value {
+                flex-direction: column;
+            }
+        }
+
+        .right {
+            max-width: 31rem;
+
+            button {
+                height: 17.7rem;
+            }
+
+            .year-old {
+                p {
+                    line-height: 2.4rem; // aumentando o espaçamento entre as linhas
+                }
+            }
+        }
+    }
 }
 
 .info-geral {
@@ -109,6 +201,8 @@
     background-color: #090A0A;
     display: flex; // displau flex para poder centralizar/alinhar todos os elementos no centro da div
     align-items: center;
+    // display: none; // para trabalhar a responsividade em etapas
+
 
     ul {
         display: flex;
@@ -141,6 +235,8 @@
     background-position: top center;
     background-repeat: no-repeat;
     overflow: hidden;
+    // display: none; // para trabalhar a responsividade em etapas
+
 
     .container {
         display: flex;
@@ -193,6 +289,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     overflow: hidden;
+    // display: none;  // para trabalhar a responsividade em etapas
 
     .description {
         display: flex;

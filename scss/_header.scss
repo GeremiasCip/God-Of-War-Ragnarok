@@ -35,4 +35,31 @@ header {
             }
         }
     }
+
+    // @media(max-width: 1200px){ // desktop : não será utilizado pois não houve nenhuma quebra de layout
+
+    // }
+
+    // @media(max-width: 991px){ // tablets não será utilizado pois não houve nenhuma quebra de layout
+
+
+    // }
+
+    @media(max-width: 560px){ // smartphones
+        height: 7rem;
+
+        .sony{ // escondendo o logo da sony
+            display: none;
+        }
+
+        .logo{
+            max-width: 140px;
+        }
+
+        .platform {
+            span {
+                display: none; // escondendo o texto span
+            }
+        }
+    }
 }

@@ -8,12 +8,38 @@
         line-height: 20px;
         margin-left: 1.5rem;
     }
+
+    @media(max-width: 1200px){
+        span {
+            font-size: 1.8rem;
+        }
+    }
+
+    @media(max-width: 991px) {
+        justify-content: center;
+    }
+
+    @media(max-width: 560px) {
+        span {
+            font-size: 1.6rem; // padrão
+        }
+    }
 }
 
 h1 {
     font-weight: 700;
     font-size: 12rem;
     line-height: 97.5%;
+
+    @media(max-width: 1200px) {
+        font-size: 10rem;
+    }
+
+    @media(max-width: 560px){
+        font-size: 6rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
 }
 
 h2 {
